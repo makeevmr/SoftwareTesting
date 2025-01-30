@@ -1,0 +1,3 @@
+add_library(graph_validation OBJECT graph_validation.cpp)
+
+target_include_directories(graph_validation PUBLIC include)
