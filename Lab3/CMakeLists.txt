@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(Lab2 LANGUAGES CXX)
+project(Lab3 LANGUAGES CXX)
 
 set(CMAKE_CXX_COMPILER "/usr/bin/g++-13")
 set(CMAKE_CXX_STANDARD 20)
@@ -22,13 +22,13 @@ add_subdirectory(tests)
 
 find_package(GTest REQUIRED)
 
-add_executable(lab2_tests)
+add_executable(lab3_tests)
 
-target_link_libraries(lab2_tests PRIVATE 
+target_link_libraries(lab3_tests PRIVATE 
     GTest::GTest
     bgl_tests
     merge
     graph_validation
 )
 
-add_test(lab2_gtests lab2_tests)
+add_test(lab3_gtests lab3_tests)

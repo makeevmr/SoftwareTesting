@@ -1,5 +1,5 @@
-#ifndef LAB2_SRC_GRAPH_VALIDATION
-#define LAB2_SRC_GRAPH_VALIDATION
+#ifndef LAB3_SRC_GRAPH_VALIDATION
+#define LAB3_SRC_GRAPH_VALIDATION
 
 #include <array>
 #include <vector>
@@ -58,4 +58,4 @@ template <typename Graph, typename EdgeProperties, typename Property>
 [[nodiscard]] bool isValidEdgeProperty(
     Graph& graph, std::vector<Property>& correct_edges_property);
 
-#endif  // LAB2_SRC_GRAPH_VALIDATION
+#endif  // LAB3_SRC_GRAPH_VALIDATION

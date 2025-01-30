@@ -1,5 +1,5 @@
-#ifndef LAB2_SRC_MERGE
-#define LAB2_SRC_MERGE
+#ifndef LAB3_SRC_MERGE
+#define LAB3_SRC_MERGE
 
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/adjacency_matrix.hpp>
@@ -19,4 +19,4 @@ template <typename Graph, typename VertexDesc>
 void mergeGraphs(Graph& g1, VertexDesc v_in_g1, const Graph& g2,
                  VertexDesc u_in_g2);
 
-#endif  // LAB2_SRC_MERGE
+#endif  // LAB3_SRC_MERGE
