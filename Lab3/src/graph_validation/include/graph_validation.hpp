@@ -41,7 +41,11 @@ typedef boost::subgraph<boost::adjacency_list<
 typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::undirectedS,
                               boost::no_property,
                               boost::property<boost::edge_weight_t, int>>
-    WeightedGraph;
+    WeightedAdjList;
+
+typedef boost::adjacency_matrix<boost::undirectedS, boost::no_property,
+                                boost::property<boost::edge_weight_t, int>>
+    WeightedAdjMatrix;
 
 typedef boost::adjacency_list<boost::setS, boost::vecS, boost::undirectedS,
                               VertexProperties, EdgeProperties>
