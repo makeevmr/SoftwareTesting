@@ -1,7 +1,5 @@
 ----------------------------------------------
 ADJACENTY LIST:
-EDGES ARE STORED IN A setS
-VERTICES ARE STORED IN A vecS
 
 CREATION UNDIRECTED ADJACENTY LIST 10 NODES
 Time: 0.105939 milliseconds
@@ -53,8 +51,6 @@ TOTAL TESTING TIME: 2475 ms
 
 ----------------------------------------------
 ADJACENTY MATRIX:
-EDGES ARE STORED IN A setS
-VERTICES ARE STORED IN A vecS
 
 CREATION UNDIRECTED ADJACENTY MATRIX 10 NODES
 Time: 0.014791 milliseconds
