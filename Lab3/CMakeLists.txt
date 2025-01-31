@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(Lab3 LANGUAGES CXX)
+project(Lab2 LANGUAGES CXX)
 
 set(CMAKE_CXX_COMPILER "/usr/bin/g++-13")
 set(CMAKE_CXX_STANDARD 20)
@@ -12,23 +12,31 @@ set(GCC_ADDITIONAL_WARNINGS_COMPILE_FLAGS "-Werror -Wall -Wextra -Wpedantic -Wca
 
 set(GCC_LINK_FLAGS "")
 
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -O2")
+# set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -g")
+# set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -O2")
+# set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_ADDITIONAL_WARNINGS_COMPILE_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_LINK_FLAGS}")
-
-enable_testing()
 
 add_subdirectory(src)
 add_subdirectory(tests)
 
+enable_testing()
+
 find_package(GTest REQUIRED)
 
-add_executable(lab3_tests)
-
-target_link_libraries(lab3_tests PRIVATE 
+add_executable(lab3_adj_list_tests)
+target_link_libraries(lab3_adj_list_tests PRIVATE 
     GTest::GTest
-    bgl_tests
-    merge
     graph_validation
+    automated_adj_list_testing
 )
+add_test(lab3_adj_list_gtests lab3_adj_list_tests)
 
-add_test(lab3_gtests lab3_tests)
+add_executable(lab3_adj_matrix_tests)
+target_link_libraries(lab3_adj_matrix_tests PRIVATE 
+    GTest::GTest
+    graph_validation
+    automated_adj_matrix_testing
+)
+add_test(lab3_adj_matrix_gtests lab3_adj_matrix_tests)

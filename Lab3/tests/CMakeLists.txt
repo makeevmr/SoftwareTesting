@@ -1,1 +1,2 @@
-add_library(bgl_tests OBJECT bgl_test.cpp)
+add_library(automated_adj_list_testing OBJECT automated_adj_list_testing.cpp)
+add_library(automated_adj_matrix_testing OBJECT automated_adj_matrix_testing.cpp)

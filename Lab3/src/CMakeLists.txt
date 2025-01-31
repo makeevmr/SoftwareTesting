@@ -1,2 +1,1 @@
 add_subdirectory(graph_validation)
-add_subdirectory(merge)
